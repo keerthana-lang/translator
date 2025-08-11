@@ -41,7 +41,7 @@ export default function RandomGenerator() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-red-500 via-purple-900 to-orange-700 text-white p-6">
       <h1 className="text-3xl font-bold mb-4 drop-shadow-lg">Random Generator</h1>
 
-      <div className="bg-black/40 p-8 rounded-xl shadow-lg w-100 h-50 max-w-md text-center">
+      <div className="bg-black/40 p-8 rounded-xl shadow-lg w-90 h-70 max-w-md text-center">
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -54,7 +54,7 @@ export default function RandomGenerator() {
 
         <button
           onClick={generateRandom}
-          className="bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-lg mb-4"
+          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg mb-4"
         >
           Generate
         </button>
@@ -74,7 +74,7 @@ export default function RandomGenerator() {
 
       {history.length > 0 && (
         <div className="mt-6 bg-black/40 p-4 rounded-xl w-full max-w-md">
-          <h2 className="text-lg font-bold mb-3">History (last 5)</h2>
+          <h2 className="text-lg font-bold mb-2">History (last 5)</h2>
           <ul className="list-disc list-inside">
             {history.map((item, index) => (
               <li key={index} className="drop-shadow-lg">{item}</li>
